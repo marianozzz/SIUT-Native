@@ -20,12 +20,10 @@ $respuesta = mysqli_query($conexion, $consulta);
            foreach($respuesta as $res)
            {
             $_SESSION['token'] = $res['id'];
+            $_SESSION['user']  = $res['name'];
            }
             
-            
             echo "success";
-
-           
         }
     else
         {
