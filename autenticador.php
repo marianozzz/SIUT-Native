@@ -10,8 +10,9 @@ $conexion = Conectar();
 $pass = $_POST['password'];
 $email = $_POST['email'];
 
-$consulta = "select *from users where email='$email' and pass='$pass'";
+$consulta = "select *from users where email='$email' and password='$pass'";
 
+//echo $consulta;
 $respuesta = mysqli_query($conexion, $consulta);
 
     if($respuesta)
@@ -21,9 +22,11 @@ $respuesta = mysqli_query($conexion, $consulta);
            {
             $_SESSION['token'] = $res['id'];
             $_SESSION['user']  = $res['name'];
+            echo "success";
+           // header('location:index.php');
            }
             
-            echo "success";
+           
         }
     else
         {

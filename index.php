@@ -33,6 +33,8 @@ session_start();
           else{ ?>
 
           <li class="nav-item">
+             <a class="nav-link" href="#"> <?php echo $_SESSION['user'];?></a>
+          </li>
              <a class="nav-link" href="#" onclick="cerrar()"> Cerrar Sesion</a>
           </li>
         <?php } ?>
@@ -67,18 +69,18 @@ session_start();
 
 
 <script src="dist/js/jquery-3.7.1.js"></script>
-<script src="dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="text/javascript">
 
 function inicio(){
-	$('#contenedor').load('inicio.php')/*aqui no se como cargar la pagina en el div derecho*/
+	$('#contenedor').load('inicio.php')
 }
 function login(){
-	$('#contenedor').load('login.php')/*aqui no se como cargar la pagina en el div derecho*/
+	$('#contenedor').load('login.php')
 }
 function cerrar(){
-	$('#contenedor').load('cerrar.php')/*aqui no se como cargar la pagina en el div derecho*/
+	$('#contenedor').load('cerrar.php')
 }
 function perfil(){
 	$('#contenedor').load('users/profile.php')/*aqui no se como cargar la pagina en el div derecho*/
