@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/sidebars.css">
  
     <title>Inicio</title>
 </head>
@@ -61,7 +62,7 @@ session_start();
 </nav>
 
 
-<div class="container">
+<div class="container-fluid">
     <div id="contenedor">
 
     </div>
