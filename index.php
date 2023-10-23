@@ -28,7 +28,7 @@ session_start();
           <a class="nav-link" href="#" onclick="login()">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Registrarse</a>
+          <a class="nav-link" href="#" onclick="register()">Registrarse</a>
         </li>
         <?php }
           else{ ?>
@@ -84,7 +84,10 @@ function cerrar(){
 	$('#contenedor').load('cerrar.php')
 }
 function perfil(){
-	$('#contenedor').load('users/profile.php')/*aqui no se como cargar la pagina en el div derecho*/
+	$('#contenedor').load('users/profile.php')
+}
+function register(){
+	$('#contenedor').load('register.php')
 }
 </script>
 
