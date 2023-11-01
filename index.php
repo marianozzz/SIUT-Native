@@ -14,7 +14,7 @@ session_start();
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">My KPOP</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,9 +38,8 @@ session_start();
           </li>
              <a class="nav-link" href="#" onclick="cerrar()"> Cerrar Sesion</a>
           </li>
-        <?php } ?>
-        
-        <li class="nav-item dropdown">
+
+          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Opciones
           </a>
@@ -51,6 +50,9 @@ session_start();
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <?php } ?>
+        
+     
        
       </ul>
       <form class="d-flex" role="search">

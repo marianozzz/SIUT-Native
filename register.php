@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row justify-content-md-center">
     <div class="col-md-6">
         <form id="registroForm" class="form-control mt-4">
         <div class="form-group">

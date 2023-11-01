@@ -1,5 +1,5 @@
 
-<div class="row mt-4">
+<div class="row justify-content-md-center mt-4">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-primary">
