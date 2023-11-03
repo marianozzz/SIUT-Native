@@ -8,11 +8,21 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/sidebars.css">
+
+    <style>
+        body {
+            padding-bottom: 70px; /* Ajusta este valor para dejar espacio para el footer */
+        }
+
+        main {
+            margin-bottom: 20px; /* Ajusta este valor para dejar espacio entre el contenido y el footer */
+        }
+    </style>
  
     <title>Inicio</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">My KPOP</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,19 +34,19 @@ session_start();
           <a class="nav-link active" aria-current="page" href="#" onclick="inicio()" id="inicio">Inicio</a>
         </li>
         <?php if (!isset($_SESSION['token'])){ ?>
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="login()">Login</a>
+        <li class="nav-item ">
+          <a class="nav-link active" href="#" onclick="login()">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="register()">Registrarse</a>
+          <a class="nav-link active" href="#" onclick="register()">Registrarse</a>
         </li>
         <?php }
           else{ ?>
 
-          <li class="nav-item">
-             <a class="nav-link" href="#"> <?php echo $_SESSION['user'];?></a>
+          <li class="nav-item ">
+             <a class="nav-link active" href="#"> <?php echo $_SESSION['user'];?></a>
           </li>
-             <a class="nav-link" href="#" onclick="cerrar()"> Cerrar Sesion</a>
+             <a class="nav-link active" href="#" onclick="cerrar()"> Cerrar Sesion</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -66,10 +76,26 @@ session_start();
 
 <div class="container-fluid">
     <div id="contenedor">
-
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card">
+                <div class="card-header">
+                  <img src="img/black.jpg" class="rounded mx-auto d-block" alt="...">
+                </div>
+                <div class="card-body">
+                  <p>Fans de Blackpink criticaron boletos de hasta 30 mil pesos para el concierto en el Foro Sol</p>
+                </div>
+            </div>
+        </div>
+      </div>
+         
     </div>
 </div>
-
+<footer class="fixed-bottom bg-dark text-light text-center p-3">
+        <div class="container">
+            <p>&copy; 2023 My KPOP. Todos los derechos reservados.</p>
+        </div>
+</footer>
 
 <script src="dist/js/jquery-3.7.1.js"></script>
 <script src="dist/js/bootstrap.bundle.min.js"></script>
